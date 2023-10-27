@@ -25,7 +25,7 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 **a. (8pts) iterative solution** Implement `parens_match_iterative`, a solution to this problem using the `iterate` function. **Hint**: consider using a single counter variable to keep track of whether there are more open or closed parentheses. How can you update this value while iterating from left to right through the input? What must be true of this value at each step for the parentheses to be matched? To complete this, complete the `parens_update` function and the `parens_match_iterative` function. The `parens_update` function will be called in combination with `iterate` inside `parens_match_iterative`. Test your implementation with `test_parens_match_iterative`.
 
 
-.  
+.  We can update this value while iterating by recursively calling our iterate function while using parens_update to add to it, subtract from it, or keep it the same depending on whether or not we see an open parentheses, close parentheses, or other character. For the parentheses to be matched, this value must end up as 0. This means that there are the same number of open and close parentheses.
 . 
 
 
